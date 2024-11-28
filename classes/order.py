@@ -30,3 +30,12 @@ class Order:
     def add_product(self, product):
         self.products.append(product)
 
+    @classmethod
+    def total_orders(cls):
+        return cls._total_orders
+
+    @classmethod
+    def total_sum(cls):
+        return cls._total_sum
+
+

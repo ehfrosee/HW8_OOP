@@ -1,6 +1,3 @@
-from order import Order
-from product import Product
-
 class Customer:
     """
         класс Клиент
@@ -39,30 +36,3 @@ class Customer:
         self.orders.append(order)
 
 
-
-if __name__ == '__main__':
-    """
-    Тестирование класса
-    """
-    product1 = Product('Apple', 1.23)
-    product2 = Product('Peach', 3.32)
-    product3 = Product('Orange', 2.47)
-
-    print(f"Продукт\n{product1}")
-
-    order1 = Order([product1, product2])
-    print(f"Заказ 1:\n{order1}")
-    order2 = Order([product3, product1, product3])
-    print(f"Заказ 2:\n{order2}")
-    order2.add_product(product2)
-    print(f"Заказ 2 дополненный:\n{order2}")
-
-    customer1 = Customer("Иван")
-    print(customer1)
-    customer2 = Customer("Марья")
-    print(customer2)
-
-    customer1.add_order(order1)
-    customer2.add_order(order2)
-    print(f"Покупатель 1\n{customer1}")
-    print(f"Покупатель 2\n{customer2}")
